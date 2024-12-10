@@ -29,24 +29,24 @@ function getWeatherData(city) {
 function displayWeather(data) {
   // عرض اليوم  
   const today = data.forecast.forecastday[0];
-  document.getElementById('todayCity').textContent = data.location.name;
-  document.getElementById('todayTemp').textContent = `${today.day.avgtemp_c}°C`;
-  document.getElementById('todayCondition').textContent = today.day.condition.text;
+  document.getElementById('todayCity').innerHTML = data.location.name;
+  document.getElementById('todayTemp').innerHTML = `${today.day.avgtemp_c}°C`;
+  document.getElementById('todayCondition').innerHTML = today.day.condition.text;
   document.getElementById('todayIcon').innerHTML = `<img src="https:${today.day.condition.icon}" alt="${today.day.condition.text}">`;
-  document.getElementById('todayDate').textContent = new Date(today.date).toLocaleDateString('ar-EG', { weekday: 'long' });
+  document.getElementById('todayDate').innerHTML = new Date(today.date).toLocaleDateString('ar-EG', { weekday: 'long' });
 console.log(today);
 
   // عرض الغد  
   const tomorrow = data.forecast.forecastday[1];
-  document.getElementById('tomorrowTemp').textContent = `${tomorrow.day.avgtemp_c}°C`;
-  document.getElementById('tomorrowCondition').textContent = tomorrow.day.condition.text;
+  document.getElementById('tomorrowTemp').innerHTML = `${tomorrow.day.avgtemp_c}°C`;
+  document.getElementById('tomorrowCondition').innerHTML = tomorrow.day.condition.text;
   document.getElementById('tomorrowIcon').innerHTML = `<img src="https:${tomorrow.day.condition.icon}" alt="${tomorrow.day.condition.text}">`;
-  document.getElementById('tomorrowWeather').querySelector('.header').innerHTML += `<span>${new Date(tomorrow.date).toLocaleDateString('ar-EG', { weekday: 'long' })}</span>`;
+  document.getElementById('tomorrowWeather').querySelector('.header').innerHTML = `<span>${new Date(tomorrow.date).toLocaleDateString('ar-EG', { weekday: 'long' })}</span>`;
 
   // عرض بعد الغد  
   const dayAfterTomorrow = data.forecast.forecastday[2];
-  document.getElementById('dayAfterTomorrowTemp').textContent = `${dayAfterTomorrow.day.avgtemp_c}°C`;
-  document.getElementById('dayAfterTomorrowCondition').textContent = dayAfterTomorrow.day.condition.text;
+  document.getElementById('dayAfterTomorrowTemp').innerHTML = `${dayAfterTomorrow.day.avgtemp_c}°C`;
+  document.getElementById('dayAfterTomorrowCondition').innerHTML = dayAfterTomorrow.day.condition.text;
   document.getElementById('dayAfterTomorrowIcon').innerHTML = `<img src="https:${dayAfterTomorrow.day.condition.icon}" alt="${dayAfterTomorrow.day.condition.text}">`;
-  document.getElementById('dayAfterTomorrowWeather').querySelector('.header').innerHTML += `<span>${new Date(dayAfterTomorrow.date).toLocaleDateString('ar-EG', { weekday: 'long' })}</span>`;
+  document.getElementById('dayAfterTomorrowWeather').querySelector('.header').innerHTML = `<span>${new Date(dayAfterTomorrow.date).toLocaleDateString('ar-EG', { weekday: 'long' })}</span>`;
 }
