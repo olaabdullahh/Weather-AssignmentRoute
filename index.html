@@ -1,0 +1,148 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link  
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg w-100">
+      <div class="container">
+        <div class="logo">
+          <img src="./Images/logo@2x.png" class="w-100" alt="logo" />
+        </div>
+        <div class="logo-title">
+          <h1 class="navbar-brand m-0 p-0 text-white" href="#">Weather</h1>
+          <span>tagline goes here</span>
+        </div>
+        <button  
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-white active px-4 py-0" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-4 py-0" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-4 py-0" href="#">Live cameras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-4 py-0" href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-4 py-0" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="home">
+      <div class="container overflow-auto">
+        <div class="search-inputs mt-5 d-flex rounded-5">
+          <input  
+            type="text"
+            class="form-control text-white bg-transparent border-0 rounded-3"
+            id="cityInput"
+            placeholder="Find your location"
+          />
+          <button id="getWeatherBtn" class="text-white rounded-5">Find</button>
+        </div>
+
+        <div class="days d-flex mt-4">
+          <div class="today-weather text-white" id="todayWeather">
+            <div class="header d-flex justify-content-between">
+              <span class="d-inline-block ps-2">Today</span>
+              <span class="d-inline-block pe-2" id="todayDate"></span>
+            </div>
+            <div class="content pb-2">
+              <span class="city" id="todayCity">Aleppo</span>
+              <p class="degree" id="todayTemp">0.0°C</p>
+              <span class="icon" id="todayIcon">🌤️</span>
+              <p class="custem" id="todayCondition">clear</p>
+            </div>
+          </div>
+          <div class="weather text-white" id="tomorrowWeather">
+            <div class="header d-flex justify-content-center">
+              <!-- <span class="d-inline-block ps-2">غداً</span> -->
+            </div>
+            <div class="content pb-2 text-center">
+              <p class="degree" id="tomorrowTemp">0.0°C</p>
+              <span class="icon" id="tomorrowIcon">🌤️</span>
+              <p class="custem" id="tomorrowCondition">clear</p>
+            </div>
+          </div>
+          <div class="tomorrow-weather text-white" id="dayAfterTomorrowWeather">
+            <div class="header d-flex  justify-content-center">
+              <!-- <span class="d-inline-block ps-2">بعد غدٍ</span> -->
+            </div>
+            <div class="content pb-2 text-center">
+              <p class="degree" id="dayAfterTomorrowTemp">0.0°C</p>
+              <span class="icon" id="dayAfterTomorrowIcon">🌤️</span>
+              <p class="custem" id="dayAfterTomorrowCondition">clear</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container overflow-hidden">
+        <div class="row align-items-center">
+          <div class="col-8">
+            <div class="item">
+              <div class="search-inputs my-5 d-flex rounded-5">
+                <input  
+                  type="text"
+                  class="form-control bg-transparent border-0 rounded-3"
+                  id="emailInput"
+                  placeholder="Find your email to subscribe"
+                />
+                <button id="subscribeBtn" class="text-white rounded-5">Subscribe</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 offset-1">
+            <div class="icons d-flex">
+              <div class="icon rounded-circle mx-1 d-flex align-items-center justify-content-center">
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              <div class="icon rounded-circle mx-1 d-flex align-items-center justify-content-center">
+                <i class="fa-brands fa-google"></i>
+              </div>
+              <div class="icon rounded-circle mx-1 d-flex align-items-center justify-content-center">
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <div class="icon rounded-circle mx-1 d-flex align-items-center justify-content-center">
+                <i class="fa-brands fa-github"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text-secondary">
+          Copyright 2014 Company name. Designed by Themezy. All rights reserved  
+        </p>
+      </div>
+    </footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

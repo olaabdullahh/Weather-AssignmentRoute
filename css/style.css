@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+.navbar {
+  background-color: #1e202b !important;
+  height: 120px
+}
+.navbar .logo{
+  width: 50px;
+}
+.navbar .logo-title {
+  margin-left: 10px;
+}
+.navbar .logo-title h1{
+  padding-left: 0px !important;
+  font-weight: 700;
+
+}
+.navbar .logo-title span{
+  color: rgb(191, 193, 200) !important;
+  font-size: 10px;
+  font-weight: 300;
+
+}
+.navbar .active {
+  color: rgb(0, 154, 216) !important;
+  border: 2px solid rgb(0, 154, 216);
+  border-radius: 50px;
+}
+.navbar ul li{
+  margin-left: 10px;
+}
+.navbar ul a{
+  padding: 5px 25px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  color: white;
+  transition: 0.3s ease;
+}
+.navbar a:hover{
+  color: rgb(0, 154, 216) !important;
+  border: 2px solid rgb(0, 154, 216);
+  border-radius: 50px;
+}
+.home{
+  background-image: url(../Images/banner.png);
+  background-color: #1E202B;
+  height: 600px;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.search-inputs{
+  background-color: #1e202b !important;
+
+}
+.searh-inputs input{
+  padding: 15px 10px;
+  color: white !important;
+}
+.search-inputs input::placeholder{
+  color: rgba(255, 255, 255, 0.525);
+  padding: 10px;
+}
+.search-inputs input:focus{
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.search-inputs button{
+  padding: 0px 30px;
+  background-color: rgb(0, 154, 216);
+  margin: 5px 5px 5px 0;
+  border: none;
+}
+.days{
+  margin-top: 80px;
+}
+.today-weather{
+  width: 33%;
+}
+.today-weather .header{
+  background-color: #2D303D;
+}
+.today-weather .content{
+  background-color: #323544;
+  padding: 20px 20px 0px 20px;
+  height: 330px;
+}
+.content .city{
+  font-size: 18px;
+}
+.content .degree{
+  font-size: 90px;
+  color: white;
+  font-weight: 700;
+}
+.custem{
+  color: #009ad8;
+    margin: 20px 0;
+}
+.weather{
+  width: 33%;
+}
+.weather .header{
+background-color: #222530;
+}
+.weather .content{
+  background-color: #262936;
+  padding: 80px 20px 50px 20px;
+  height: 330px;
+}
+.weather .content .degree{
+  font-size: 18px;
+}
+.tomorrow-weather{
+  width: 33%;
+}
+.tomorrow-weather .header{
+  background-color: #2D303D;
+}
+.tomorrow-weather .content{
+  background-color: #323544;
+  padding: 80px 20px 0px 20px;
+  height: 330px;
+}
+.tomorrow-weather .content .degree{
+  font-size: 18px;
+}
+footer{
+  background-color: #262936;
+}
+footer .icon{
+  width: 50px;
+  height: 50px;
+  background-color: #1E202B;
+  color: #009ad8;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+footer .icon:hover{
+  background-color: #009ad8;
+  color:white ;
+}
